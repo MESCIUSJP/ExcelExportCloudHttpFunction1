@@ -1,1 +1,2 @@
 # ExcelExportCloudHttpFunction1
+Cloud FunctionsとDioDocsでExcelやPDFファイルを出力する（１）
