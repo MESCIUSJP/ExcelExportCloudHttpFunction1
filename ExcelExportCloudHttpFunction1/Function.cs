@@ -24,12 +24,12 @@ namespace ExcelExportCloudHttpFunction1
 
             //Workbook.SetLicenseKey("");
 
-            Workbook workbook = new Workbook();
+            Workbook workbook = new();
             workbook.Worksheets[0].Range["A1"].Value = Message;
 
             byte[] output;
 
-            using (var ms = new MemoryStream())
+            using (MemoryStream ms = new())
             {
                 workbook.Save(ms, SaveFileFormat.Xlsx);
                 output = ms.ToArray();
